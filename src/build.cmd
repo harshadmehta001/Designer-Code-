@@ -1,0 +1,1 @@
+browserify property\index.js --standalone property > property\property.js

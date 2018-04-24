@@ -1,0 +1,1 @@
+browserify ..\src\index.js --standalone wrightjs > wright-js.js

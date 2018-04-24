@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'wright';
+  src: url('../font/wright.eot?70672887');
+  src: url('../font/wright.eot?70672887#iefix') format('embedded-opentype'),
+       url('../font/wright.woff?70672887') format('woff'),
+       url('../font/wright.ttf?70672887') format('truetype'),
+       url('../font/wright.svg?70672887#wright') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.forward {
+  render-order:"1"
+}
+.djs-label {
+   font-family: 'arial', Fallback, sans-serif !important;
+   font-size: .6em ;    
+}
+/* connection - allowed / not allowed*/ 
+.djs-connection.connect-ok .djs-visual > :nth-child(1),
+.djs-connection.drop-ok .djs-visual > :nth-child(1) {
+  stroke: #b8ffbd /* light-green */ !important;
+    fill-opacity: 1  !important; 
+
+}
+.djs-connection.connect-not-ok .djs-visual > :nth-child(1),
+.djs-connection.drop-not-ok .djs-visual > :nth-child(1) {
+  stroke: #E56283 /* light-red */ !important;
+  fill-opacity: 1  !important; 
+}
+
+/* shape drop - allowed / not allowed*/ 
+.djs-shape.connect-ok .djs-visual > :nth-child(1),
+.djs-shape.new-parent .djs-visual > :nth-child(1) {
+  fill: #b8ffbd /* light-green */ !important;
+  fill-opacity: 1  !important; 
+}
+
+.djs-shape.connect-not-ok .djs-visual > :nth-child(1),
+.djs-shape.drop-not-ok .djs-visual > :nth-child(1) {
+  fill: #f9dee5 /* light-red */ !important;
+  fill-opacity: 1  !important; 
+}
+
+/* background */
+.drop-not-ok,
+.connect-not-ok {
+  cursor: not-allowed;
+  background: #f0e5e5 /* light-red */ !important;
+  fill-opacity: 1  !important; 
+}
+svg.drop-not-ok {
+  background: #f9dee5 /* light-red */ !important;
+  fill-opacity: 1  !important; 
+}
+
+svg.new-parent {
+  background: #e4f9fb /* very light-blue */ !important;
+  fill-opacity: 1  !important; 
+}
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'bpmn';
+    src: url('../font/bpmn.svg?70672887#bpmn') format('svg');
+  }
+}
+*/
+ .PropertyEditor {
+    font-family: 'wright', Fallback, sans-serif;
+    font-size: .8em;
+    width: auto;
+ }
+ [class^="wright-icon-"]:before, [class*=" wright-icon-"]:before {
+  font-family: "wright";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+/*Palette Icons*/ 
+.wright-icon-lasso-tool:before { content: '\e862'; } /* '' */
+.wright-icon-space-tool:before { content: '\e85f'; } /* '' */
+.wright-icon-connection:before { content: '\e810'; } /* '' */
+.wright-icon-connection-auto:before { content: '\e860'; } /* '' */
+.wright-icon-start-state:before { content: '\e82d'; } /* '' */
+.wright-icon-intermediate-state:before { content: '\e845'; } /* '' */
+.wright-icon-final-state:before { content: '\e838'; } /* '' */
+.wright-icon-compound-state:before { content: '\e821'; } /* '' */
+.wright-icon-parallel-state:before { content: '\e865'; } /* '' */
+
+/*Context Pad Icons*/
+.wright-icon-trash:before { content: '\e801'; } /* '' */
+.wright-icon-region-insert-above:before { content: '\e863'; } /* '' */
+.wright-icon-region-insert-below:before { content: '\e85e'; } /* '' */
+.wright-icon-property-edit:before { content: '\e800'; } /* '' */
+.wright-icon-atomic-self:before { content: '\e809'; }
+.wright-icon-remove-bends:before { content: '\e810'; }
