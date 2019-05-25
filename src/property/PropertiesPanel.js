@@ -147,7 +147,7 @@ function create(viewModel) {
 }
 
 function getEditorFields(viewModel) {
-    var returnNode = '';
+    var returnNode = 'adad';
 
     if (viewModel.type === 'atomic-state') {
         if (viewModel.state === 'final') {
